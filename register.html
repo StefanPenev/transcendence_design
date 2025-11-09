@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transcendence Pong 3D - Register</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="register.css" />
+</head>
+<body>
+  <div class="register-container">
+    <h1 class="main-title">TRANSCENDENCE<br><span>PONG 3D</span></h1>
+
+    <div class="register-card">
+      <h2>Create Account</h2>
+      <form>
+        <div class="name-fields">
+          <div class="field-group">
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" placeholder="Enter first name" />
+          </div>
+          <div class="field-group">
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" placeholder="Enter last name" />
+          </div>
+        </div>
+
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Choose a username" />
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="Enter your email" />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Create a password" />
+
+        <button type="submit" class="register-btn">Register</button>
+
+        <button type="button" class="google-btn">
+          <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google logo" />
+          Sign up with Google
+        </button>
+      </form>
+
+      <p class="login-text">
+        Already have an account? <a href="login.html">Login</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
