@@ -9,15 +9,12 @@
 <body>
 
 <div class="page-background">
-
   <div class="main-wrapper">
 
     <!-- Header -->
     <header class="header">
       <div class="logo">Transcendence Pong 3D</div>
-
       <div class="top-buttons">
-        <!-- Top-right Settings fixed: styled <a>, no button inside -->
         <a href="settings.html" class="header-btn">⚙ Settings</a>
         <button class="header-btn logout">⎋ Logout</button>
       </div>
@@ -39,10 +36,10 @@
         <img src="avatar.jpg" class="avatar" alt="User Avatar">
         <h2>JSmith</h2>
         <p class="rank">Rank: 1,234</p>
-
-        <div class="rows">
-          <div><strong>Wins</strong><br>42</div>
-          <div><strong>Losses</strong><br>17</div>
+        <div class="presence">
+          <span class="presence-dot online" id="presenceDot" aria-hidden="true"></span>
+          <span class="presence-text" id="presenceText">Online</span>
+          <button type="button" class="presence-toggle" id="presenceToggle">Go Offline</button>
         </div>
       </div>
 
@@ -55,67 +52,90 @@
           <li><span>3. MLiu</span> <span>45</span></li>
           <li><span>4. KClark</span> <span>40</span></li>
         </ul>
-
         <a href="leaderboard.html">
           <button class="view-btn leaderboard-view">View</button>
         </a>
       </div>
 
-      <!-- FRIENDS LEFT -->
+      <!-- FRIENDS -->
       <div class="card friends">
         <h3>Friends</h3>
-
         <div class="friend">
           <img src="avatar1.jpg" class="friend-avatar" alt="Friend Avatar">
           <span class="friend-name">MClark</span>
           <div class="status-dot green"></div>
         </div>
-
         <div class="friend">
           <img src="avatar.jpg" class="friend-avatar" alt="Friend Avatar">
           <span class="friend-name">RAdams</span>
           <div class="status-dot green"></div>
         </div>
-
         <div class="friend">
           <img src="avatar1.jpg" class="friend-avatar" alt="Friend Avatar">
           <span class="friend-name">SWilson</span>
           <div class="status-dot green"></div>
         </div>
-
         <a href="friends.html">
           <button class="view-btn">View</button>
         </a>
       </div>
 
-      <!-- PERFORMANCE -->
-      <div class="card performance">
-        <h3>Performance</h3>
-        <p><strong>Level</strong><br>12</p>
-        <div class="rows">
+      <!-- MATCH STATS -->
+      <div class="card match-stats">
+        <h3>Match Stats</h3>
+        <div class="stats-summary">
+          <div><strong>Games</strong><br>59</div>
           <div><strong>Wins</strong><br>42</div>
           <div><strong>Losses</strong><br>17</div>
+          <div><strong>Win Rate</strong><br>71.2%</div>
         </div>
-      </div>
-
-      <!-- FRIENDS RIGHT -->
-      <div class="card friends-right">
-        <h3>Friends</h3>
-
-        <div class="request">
-          <div class="req-ico"></div>
-          Hey, want to play?
-        </div>
-
-        <a href="settings.html">
-          <button class="settings-btn">⚙ Settings</button>
-        </a>
+        <table class="stats-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Opponent</th>
+              <th>Score</th>
+              <th>Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2025-11-14</td>
+              <td>ADavis</td>
+              <td>11 - 6</td>
+              <td class="result-win">Win</td>
+            </tr>
+            <tr>
+              <td>2025-11-13</td>
+              <td>MLiu</td>
+              <td>9 - 11</td>
+              <td class="result-loss">Loss</td>
+            </tr>
+            <tr>
+              <td>2025-11-12</td>
+              <td>KClark</td>
+              <td>11 - 4</td>
+              <td class="result-win">Win</td>
+            </tr>
+            <tr>
+              <td>2025-11-11</td>
+              <td>RAdams</td>
+              <td>11 - 9</td>
+              <td class="result-win">Win</td>
+            </tr>
+            <tr>
+              <td>2025-11-10</td>
+              <td>MClark</td>
+              <td>8 - 11</td>
+              <td class="result-loss">Loss</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
     </div>
 
   </div>
-
 </div>
 
 </body>

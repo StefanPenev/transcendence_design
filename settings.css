@@ -36,6 +36,7 @@
 .top-buttons {
   display: flex;
   gap: 14px;
+  align-items: center; /* ensure vertical alignment of header buttons */
 }
 
 .header-btn {
@@ -46,6 +47,13 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   cursor: pointer;
   font-weight: 600;
+  display: inline-flex;          /* center contents inside */
+  align-items: center;           /* center vertically */
+  justify-content: center;       /* center horizontally */
+  text-decoration: none;
+  color: inherit;
+  font-size: 16px;               /* keep size consistent */
+  line-height: 1;                /* avoid extra line height from emoji/text */
 }
 
 .header-btn.logout {
@@ -56,7 +64,7 @@ button, .upload-btn {
   transition: transform 0.12s ease;
 }
 
-button:active, .upload-btn:active {
+button:active, .upload-btn:active, .header-btn:active {
   transform: translateY(2px);
 }
 
@@ -78,9 +86,7 @@ button:active, .upload-btn:active {
   margin: 0 0 20px 0;
 }
 
-/* ---------------------------------------------------------
-   BASIC INFO — INLINE EDIT MODE
---------------------------------------------------------- */
+/* BASIC INFO */
 .info-row {
   position: relative;
   padding: 16px 0;
@@ -111,7 +117,6 @@ button:active, .upload-btn:active {
   font-size: 14px;
 }
 
-/* Hidden edit bar */
 .edit-bar {
   display: none;
   margin-top: 12px;
@@ -164,9 +169,7 @@ button:active, .upload-btn:active {
   cursor: pointer;
 }
 
-/* ---------------------------------------------------------
-   AVATAR
---------------------------------------------------------- */
+/* AVATAR */
 .avatar-card {
   text-align: center;
 }
@@ -191,9 +194,7 @@ button:active, .upload-btn:active {
 
 .upload-btn input { display: none; }
 
-/* ---------------------------------------------------------
-   2FA
---------------------------------------------------------- */
+/* 2FA */
 .main-btn {
   width: 100%;
   padding: 14px;

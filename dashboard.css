@@ -45,7 +45,6 @@
   gap: 14px;
 }
 
-/* Top-right header buttons */
 .header-btn {
   display: inline-flex;
   align-items: center;
@@ -57,8 +56,8 @@
   background: #e7e6e6;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   cursor: pointer;
-  text-decoration: none;  /* remove underline for <a> */
-  color: inherit;         /* text color */
+  text-decoration: none;
+  color: inherit;
   border: none;
   transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
@@ -117,20 +116,56 @@ button:active {
 .profile { text-align: center; }
 
 .avatar {
-  width: 82px;
+  width: 110px;
   border-radius: 50%;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .rank {
   color: #666;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
-.rows {
+/* Presence / online status */
+.presence {
   display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.presence-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #fff;
+}
+
+.presence-dot.online { background: #22c55e; }
+.presence-dot.offline { background: #9ca3af; }
+
+.presence-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.presence-toggle {
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  background: #e7e6e6;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.presence-toggle:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.18);
 }
 
 /* TOURNAMENT / LEADERBOARD */
@@ -155,14 +190,13 @@ button:active {
   box-shadow: 0 1px 4px #d3d9e6;
 }
 
-/* Leaderboard view btn */
 .leaderboard-view {
   position: absolute;
   right: 12px;
   bottom: 12px;
 }
 
-/* FRIENDS LEFT */
+/* FRIENDS */
 .friend {
   display: flex;
   align-items: center;
@@ -210,32 +244,57 @@ button:active {
   cursor: pointer;
 }
 
-/* FRIENDS RIGHT */
-.request {
+/* MATCH STATS */
+.match-stats {
+  grid-column: span 2;
+}
+
+.stats-summary {
   display: flex;
-  align-items: center;
-  background: #fff;
-  padding: 14px;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.stats-summary > div {
+  flex: 1;
+  background: #f5f7fa;
+  padding: 12px 10px;
   border-radius: 12px;
-  margin-bottom: 20px;
-  box-shadow: 0 1px 5px #d3d9e6;
-  font-size: 17px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  font-size: 15px;
 }
 
-.req-ico {
-  width: 34px;
-  height: 34px;
-  background: #d8e0eb;
-  border-radius: 50%;
-  margin-right: 12px;
-}
-
-.settings-btn {
+.stats-table {
   width: 100%;
-  padding: 14px;
-  background: #fff;
-  border: none;
-  border-radius: 14px;
-  box-shadow: 0 2px 6px #d3d9e6;
-  cursor: pointer;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.stats-table th {
+  text-align: left;
+  padding: 8px 10px;
+  background: #f1f5f9;
+  font-weight: 600;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.stats-table td {
+  padding: 8px 10px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.stats-table tbody tr:nth-child(even) {
+  background: #f9fbfc;
+}
+
+.result-win {
+  color: #15803d;
+  font-weight: 600;
+}
+
+.result-loss {
+  color: #b91c1c;
+  font-weight: 600;
 }
