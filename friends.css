@@ -1,0 +1,168 @@
+:root{
+  --bg1: #f8fafc;
+  --bg2: #d9eafd;
+  --card-bg: #ffffffee;
+  --muted: #9aa6b2;
+  --text: #0f1720;
+  --green: #32a55b;
+  --accent-red: #f04e4e;
+  --shadow: rgba(8,20,30,0.06);
+}
+
+html,body { height:100%; margin:0; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:var(--text); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+body {
+  background: linear-gradient(to bottom, var(--bg1) 0%, #e4edf7 30%, #d3e0ec 60%, #c2ccd7 100%);
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  padding:48px 20px;
+}
+
+.friends-card {
+  width: 920px;
+  max-width:95%;
+  background: var(--card-bg);
+  border-radius:20px;
+  padding:36px 48px;
+  box-shadow: 0 12px 40px var(--shadow);
+}
+
+.title {
+  font-size:40px;
+  margin:0 0 22px 0;
+  font-weight:700;
+  letter-spacing:-0.02em;
+}
+
+.friends-list {
+  list-style:none;
+  padding:0;
+  margin:0 0 22px 0;
+}
+
+.friend-row {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 0;
+  border-bottom:1px solid #eef3f8;
+}
+
+.left {
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.avatar {
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  object-fit:cover;
+  flex:0 0 56px;
+}
+
+.name {
+  font-size:22px;
+  font-weight:700;
+}
+
+.right { display:flex; align-items:center; gap:10px; }
+
+.status-wrap { display:inline-flex; align-items:center; gap:8px; }
+
+.status-dot {
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background: var(--green);
+  box-shadow: 0 3px 8px rgba(50,165,91,0.18);
+  display:inline-block;
+}
+
+.remove-btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:28px;
+  height:28px;
+  border-radius:6px;
+  background: rgba(240,78,78,0.06);
+  border: none;
+  cursor: pointer;
+  padding:0;
+  transition: transform .12s ease, background .12s ease;
+}
+
+.remove-btn svg { display:block; }
+
+.remove-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(240,78,78,0.12);
+}
+
+.remove-btn:active {
+  transform: translateY(1px);
+}
+
+.invitations-title {
+  margin:22px 0 16px 0;
+  font-size:28px;
+  font-weight:700;
+}
+
+/* Invitation cards */
+.invite-card {
+  background:white;
+  border-radius:12px;
+  padding:16px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  box-shadow: 0 6px 18px rgba(10,20,40,0.03);
+}
+
+.invite-left { display:flex; align-items:center; gap:14px; }
+.invite-name { font-weight:700; font-size:20px; }
+
+.invite-actions { display:flex; gap:12px; }
+.btn {
+  border:none;
+  padding:12px 22px;
+  border-radius:12px;
+  font-weight:700;
+  cursor:pointer;
+  background:#eef5ff;
+}
+.btn.decline { background:#f2f5f8; color:#111827; }
+
+/* Sent invitation card */
+.sent-invite {
+  gap:12px;
+  justify-content:flex-start;
+}
+.invite-input {
+  flex:1;
+  padding:12px 16px;
+  border-radius:12px;
+  border:1px solid #cfd7e1;
+  font-size:16px;
+}
+.invite-btn {
+  padding:12px 22px;
+  border-radius:12px;
+  background:#dce6ff;
+  border:none;
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* Responsive tweaks */
+@media (max-width:760px){
+  .friends-card { padding:20px; width:100%; }
+  .title { font-size:32px; }
+  .name, .invite-name { font-size:18px; }
+  .avatar { width:48px; height:48px; }
+  .status-dot { width:14px; height:14px; }
+  .remove-btn { width:26px; height:26px; }
+}

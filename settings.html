@@ -91,7 +91,7 @@
             <div class="edit-bar password-bar">
               <input type="password" placeholder="Current password">
               <input type="password" placeholder="New password">
-              <button class="small-update-btn">Update</button>
+              <button class="small-update-btn">Change Password</button> <!-- updated text -->
               <button class="close-edit">✖</button>
             </div>
           </div>
@@ -100,7 +100,7 @@
         <!-- AVATAR -->
         <div class="card avatar-card">
           <h2>Avatar</h2>
-          <img src="avatar.jpg" class="avatar-preview">
+          <img src="avatar.jpg" class="avatar-preview" alt="Avatar Preview">
           <label class="upload-btn">
             Change Avatar
             <input type="file" accept="image/*">
@@ -130,12 +130,11 @@
   </div>
 
   <!-- -------------------------
-   JAVASCRIPT FOR INLINE EDIT
--------------------------- -->
+       JAVASCRIPT FOR INLINE EDIT
+  -------------------------- -->
   <script>
     const editButtons = document.querySelectorAll('.edit-icon');
     const closeButtons = document.querySelectorAll('.close-edit');
-    const updateButtons = document.querySelectorAll('.small-update-btn');
 
     // Show edit bar
     editButtons.forEach(button => {
@@ -168,5 +167,4 @@
   </script>
 
 </body>
-
 </html>

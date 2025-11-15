@@ -81,7 +81,6 @@ button:active, .upload-btn:active {
 /* ---------------------------------------------------------
    BASIC INFO — INLINE EDIT MODE
 --------------------------------------------------------- */
-
 .info-row {
   position: relative;
   padding: 16px 0;
@@ -120,6 +119,16 @@ button:active, .upload-btn:active {
   padding: 12px;
   border-radius: 14px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease, opacity 0.25s ease;
+  opacity: 0;
+}
+
+.edit-bar.show {
+  display: block;
+  max-height: 200px;
+  opacity: 1;
 }
 
 .edit-bar input {
@@ -185,7 +194,6 @@ button:active, .upload-btn:active {
 /* ---------------------------------------------------------
    2FA
 --------------------------------------------------------- */
-
 .main-btn {
   width: 100%;
   padding: 14px;
@@ -227,24 +235,3 @@ button:active, .upload-btn:active {
   border-radius: 12px;
   font-weight: 600;
 }
-
-/* slide down for edit-bar */
-.edit-bar {
-  display: none;
-  margin-top: 12px;
-  background: #f7f9fc;
-  padding: 12px;
-  border-radius: 14px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.25s ease, opacity 0.25s ease;
-  opacity: 0;
-}
-
-.edit-bar.show {
-  display: block;
-  max-height: 200px;
-  opacity: 1;
-}
-

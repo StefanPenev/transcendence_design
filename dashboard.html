@@ -17,7 +17,8 @@
       <div class="logo">Transcendence Pong 3D</div>
 
       <div class="top-buttons">
-        <button class="header-btn">⚙ Settings</button>
+        <!-- Top-right Settings fixed: styled <a>, no button inside -->
+        <a href="settings.html" class="header-btn">⚙ Settings</a>
         <button class="header-btn logout">⎋ Logout</button>
       </div>
     </header>
@@ -27,6 +28,7 @@
 
       <!-- MENU -->
       <div class="card menu">
+        <h3>Game</h3>
         <button>Play</button>
         <button>Create Tournament</button>
         <button>Join Tournament</button>
@@ -34,7 +36,7 @@
 
       <!-- PROFILE -->
       <div class="card profile">
-        <img src="avatar.jpg" class="avatar">
+        <img src="avatar.jpg" class="avatar" alt="User Avatar">
         <h2>JSmith</h2>
         <p class="rank">Rank: 1,234</p>
 
@@ -44,23 +46,46 @@
         </div>
       </div>
 
-      <!-- TOURNAMENT -->
-      <div class="card tournament">
-        <h3>Tournament</h3>
+      <!-- LEADERBOARD -->
+      <div class="card tournament leaderboard-card">
+        <h3>Leaderboard</h3>
         <ul>
           <li><span>1. JSmith</span> <span>56</span></li>
           <li><span>2. ADavis</span> <span>50</span></li>
           <li><span>3. MLiu</span> <span>45</span></li>
           <li><span>4. KClark</span> <span>40</span></li>
         </ul>
+
+        <a href="leaderboard.html">
+          <button class="view-btn leaderboard-view">View</button>
+        </a>
       </div>
 
       <!-- FRIENDS LEFT -->
       <div class="card friends">
         <h3>Friends</h3>
-        <div class="friend"><div class="dot green"></div> MClark</div>
-        <div class="friend"><div class="dot orange"></div> RAdams</div>
-        <div class="friend"><div class="dot blue"></div> SWilson</div>
+
+        <div class="friend">
+          <img src="avatar1.jpg" class="friend-avatar" alt="Friend Avatar">
+          <span class="friend-name">MClark</span>
+          <div class="status-dot green"></div>
+        </div>
+
+        <div class="friend">
+          <img src="avatar.jpg" class="friend-avatar" alt="Friend Avatar">
+          <span class="friend-name">RAdams</span>
+          <div class="status-dot green"></div>
+        </div>
+
+        <div class="friend">
+          <img src="avatar1.jpg" class="friend-avatar" alt="Friend Avatar">
+          <span class="friend-name">SWilson</span>
+          <div class="status-dot green"></div>
+        </div>
+
+        <a href="friends.html">
+          <button class="view-btn">View</button>
+        </a>
       </div>
 
       <!-- PERFORMANCE -->
@@ -82,7 +107,9 @@
           Hey, want to play?
         </div>
 
-        <button class="settings-btn">⚙ Settings</button>
+        <a href="settings.html">
+          <button class="settings-btn">⚙ Settings</button>
+        </a>
       </div>
 
     </div>

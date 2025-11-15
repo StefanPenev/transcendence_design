@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Friends — UI</title>
+  <link rel="stylesheet" href="friends.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card friends-card" aria-labelledby="friends-title">
+      <h1 id="friends-title" class="title">Friends</h1>
+
+      <!-- Friends List -->
+      <ul class="friends-list" id="friendsList">
+        <li class="friend-row" data-username="MClark">
+          <div class="left">
+            <img src="avatar1.jpg" alt="MClark Avatar" class="avatar">
+            <div class="name">MClark</div>
+          </div>
+          <div class="right">
+            <span class="status-wrap" title="Online">
+              <span class="status-dot" aria-hidden="true"></span>
+              <button class="remove-btn" aria-label="Remove MClark" data-username="MClark">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M3 6h18" stroke="#f04e4e" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" stroke="#f04e4e" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M10 11v6" stroke="#f04e4e" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M14 11v6" stroke="#f04e4e" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </button>
+            </span>
+          </div>
+        </li>
+
+        <li class="friend-row" data-username="RAdams">
+          <div class="left">
+            <img src="avatar.jpg" alt="RAdams Avatar" class="avatar">
+            <div class="name">RAdams</div>
+          </div>
+          <div class="right">
+            <span class="status-wrap" title="Online">
+              <span class="status-dot" aria-hidden="true"></span>
+              <button class="remove-btn" aria-label="Remove RAdams" data-username="RAdams">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M3 6h18" stroke="#f04e4e" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" stroke="#f04e4e" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M10 11v6" stroke="#f04e4e" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M14 11v6" stroke="#f04e4e" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </button>
+            </span>
+          </div>
+        </li>
+
+        <li class="friend-row" data-username="SWilson">
+          <div class="left">
+            <img src="avatar1.jpg" alt="SWilson Avatar" class="avatar">
+            <div class="name">SWilson</div>
+          </div>
+          <div class="right">
+            <span class="status-wrap" title="Online">
+              <span class="status-dot" aria-hidden="true"></span>
+              <button class="remove-btn" aria-label="Remove SWilson" data-username="SWilson">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M3 6h18" stroke="#f04e4e" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" stroke="#f04e4e" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M10 11v6" stroke="#f04e4e" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M14 11v6" stroke="#f04e4e" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </button>
+            </span>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Sent Invitations -->
+      <h2 class="invitations-title">Sent Invitations</h2>
+      <div class="invite-card sent-invite">
+        <input type="text" class="invite-input" placeholder="Enter username">
+        <button class="btn invite-btn">Invite</button>
+      </div>
+
+      <!-- Received Invitations -->
+      <h2 class="invitations-title">Received Invitations</h2>
+      <div class="invite-card" role="region" aria-label="received invitation">
+        <div class="invite-left">
+          <img src="avatar.jpg" alt="JTaylor Avatar" class="avatar">
+          <div class="invite-name">JTaylor</div>
+        </div>
+        <div class="invite-actions">
+          <button class="btn accept">Accept</button>
+          <button class="btn decline">Decline</button>
+        </div>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>
