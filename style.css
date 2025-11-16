@@ -111,3 +111,77 @@ body {
   .container { padding:30px 20px; }
   .about { padding: 8px 20px 32px; }
 }
+
+/* --- Popup & Blur (added) --- */
+/* Blur the whole page content when the modal is open */
+.blurred {
+  filter: blur(6px);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Prevent body scroll when modal is open */
+.modal-open {
+  overflow: hidden;
+}
+
+/* Fullscreen overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 20, 40, 0.35);
+  backdrop-filter: blur(4px);
+  display: none;            /* toggled to flex by JS */
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;           /* above the fixed header */
+}
+
+/* Popup window */
+.popup {
+  background: #ffffff;
+  padding: 24px 30px;
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+  text-align: center;
+  min-width: 260px;
+  max-width: 90vw;
+  animation: pop 0.2s ease;
+}
+
+@keyframes pop {
+  from { transform: scale(0.85); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+.popup .popup-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  margin-top: 12px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .1s ease, filter .2s ease;
+}
+
+.popup .popup-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Buttons inside popup */
+.btn-ai {
+  background: linear-gradient(180deg, #5ea0ff, #2f7be0);
+  color: #fff;
+}
+
+.btn-1v1 {
+  background: linear-gradient(180deg, #3fa8ff, #1d82e8);
+  color: #fff;
+}
+
+.close-btn {
+  background: #d0d6e6;
+  color: #333;
+}
