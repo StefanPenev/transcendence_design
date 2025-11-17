@@ -81,8 +81,8 @@ body { padding-top: 40px; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 40px;
-  height: 40px;
+  min-width: 34px;
+  height: 34px;
   padding: 0 10px;
   border-radius: 12px;
   font-weight: 800;
@@ -103,7 +103,7 @@ body { padding-top: 40px; }
 
 /* View Profile buttons - gray/blue-gray/light blue */
 .btn.warm {
-  background: linear-gradient(135deg, #e2e8f0, #bfdbfe); /* gray to light blue */
+  background: #e7e6e6;
   color: #0f172a;
   border: 1px solid #94a3b8; /* blue-gray */
   box-shadow: 0 4px 12px rgba(148, 163, 184, 0.25);
@@ -112,8 +112,8 @@ body { padding-top: 40px; }
 
 /* Make the CTA smaller but consistent with .btn */
 .btn.small {
-  padding: 10px 16px;
-  font-size: 0.95rem;
+  padding: 7px 10px;
+  font-size: 0.90rem;
   border-radius: 10px;
 }
 
