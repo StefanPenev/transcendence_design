@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tournament Command Center</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="tournament.css">
+</head>
+<body>
+
+<div class="page-background">
+  <div class="main-wrapper">
+
+    <header class="top-bar">
+      <div class="logo">TRANSCENDENCE TOURNAMENT</div>
+      <div class="bar-actions">
+        <a href="dashboard.html" class="btn dashboard">Dashboard</a>
+      </div>
+    </header>
+
+    <div class="layout-grid">
+
+      <!-- Combined Active Tournament + Next Match -->
+      <section class="panel status-panel">
+        <h2 class="panel-title">
+          Active Tournament
+          <span class="pill pill-neutral" id="activeStatus">ACTIVE</span>
+        </h2>
+        <div class="panel-body status-body">
+          <div class="active-box" id="activeTournament">
+            <div class="active-line">
+              <span class="active-label">Tournament</span>
+              <span class="active-value">Pong Cup #28</span>
+            </div>
+            <div class="active-line">
+              <span class="active-label">Host</span>
+              <span class="active-value">@You</span>
+            </div>
+            <div class="active-line">
+              <span class="active-label">Players</span>
+              <span class="active-value">6 / 8</span>
+            </div>
+            <div class="active-line">
+              <span class="active-label">Started</span>
+              <span class="active-value">2025-11-17 19:15</span>
+            </div>
+          </div>
+
+          <div class="status-sep"></div>
+
+          <div class="next-match-block">
+            <h3 class="subheading">Next Match</h3>
+            <div class="ring">
+              <div class="ring-inner"></div>
+              <div class="ring-info">
+                <div class="match-vs">You vs K-Clark</div>
+                <div class="match-time">Starts in 02:14</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Orb / creation panel -->
+      <section class="panel orb-panel">
+        <h2 class="panel-title">Pong Arena</h2>
+        <div class="panel-body">
+          <div class="orb-wrapper">
+            <form class="tourn-form" id="createTournamentForm">
+              <div class="form-row">
+                <label class="field-label" for="tournName">Tournament name</label>
+                <input id="tournName" name="tournName" type="text" class="text-input" placeholder="Enter name">
+              </div>
+              <div class="form-row">
+                <label class="field-label" for="playerCount">Players</label>
+                <select id="playerCount" name="playerCount" class="player-count-select">
+                  <option value="" disabled selected>Select</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                </select>
+              </div>
+            </form>
+
+            <button type="button" id="createTournamentOrb" class="orb" aria-label="Create tournament">
+              <span class="orb-text">Create Tournament</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Waiting tournaments -->
+      <section class="panel tournaments">
+        <h2 class="panel-title">Tournaments Waiting for Players</h2>
+        <div class="panel-body">
+          <div class="list">
+            <div class="list-item joinable">
+              <div class="list-info">
+                <div class="l-name">Pong Cup #29</div>
+                <div class="l-meta">Slots: 3 / 8 players</div>
+              </div>
+              <div class="list-actions">
+                <button class="start-btn" type="button">Start</button>
+                <button class="cancel-btn" type="button">Cancel</button>
+              </div>
+            </div>
+            <div class="list-item joinable">
+              <div class="list-info">
+                <div class="l-name">Hyper League</div>
+                <div class="l-meta">3 / 4 players</div>
+              </div>
+              <div class="list-actions">
+                <button class="join-btn" type="button">Join</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
