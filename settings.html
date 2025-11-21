@@ -1,23 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Profile Settings</title>
-  <link rel="stylesheet" href="settings.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-
   <div class="page-background">
-
     <div class="main-wrapper">
-
-      <!-- HEADER -->
       <header class="header">
         <div class="logo">⚙ Profile Settings</div>
-
         <div class="top-buttons">
           <a href="dashboard.html" class="header-btn">🏠 Dashboard</a>
           <button class="header-btn logout">⎋ Logout</button>
@@ -26,16 +19,13 @@
 
       <div class="settings-grid">
 
-        <!-- BASIC INFORMATION -->
         <div class="card">
           <h2>Basic Information</h2>
 
-          <!-- First Name -->
           <div class="info-row">
             <div class="info-label">First Name</div>
             <div class="info-value">John</div>
             <button class="edit-icon">✎</button>
-
             <div class="edit-bar">
               <input type="text" placeholder="New first name">
               <button class="small-update-btn">Update</button>
@@ -43,12 +33,10 @@
             </div>
           </div>
 
-          <!-- Last Name -->
           <div class="info-row">
             <div class="info-label">Last Name</div>
             <div class="info-value">Smith</div>
             <button class="edit-icon">✎</button>
-
             <div class="edit-bar">
               <input type="text" placeholder="New last name">
               <button class="small-update-btn">Update</button>
@@ -56,12 +44,10 @@
             </div>
           </div>
 
-          <!-- Username -->
-          <div class="info-row">
+            <div class="info-row">
             <div class="info-label">Username</div>
             <div class="info-value">jsmith</div>
             <button class="edit-icon">✎</button>
-
             <div class="edit-bar">
               <input type="text" placeholder="New username">
               <button class="small-update-btn">Update</button>
@@ -69,12 +55,10 @@
             </div>
           </div>
 
-          <!-- Email -->
           <div class="info-row">
             <div class="info-label">Email</div>
             <div class="info-value">jsmith@example.com</div>
             <button class="edit-icon">✎</button>
-
             <div class="edit-bar">
               <input type="email" placeholder="New email">
               <button class="small-update-btn">Update</button>
@@ -82,12 +66,10 @@
             </div>
           </div>
 
-          <!-- Password -->
           <div class="info-row">
             <div class="info-label">Password</div>
             <div class="info-value">••••••••</div>
             <button class="edit-icon">✎</button>
-
             <div class="edit-bar password-bar">
               <input type="password" placeholder="Current password">
               <input type="password" placeholder="New password">
@@ -97,19 +79,19 @@
           </div>
         </div>
 
-        <!-- AVATAR -->
         <div class="card avatar-card">
           <h2>Avatar</h2>
-          <img src="avatar.jpg" class="avatar-preview" alt="Avatar Preview">
+          <div class="avatar-center">
+            <img src="avatar.jpg" class="avatar-preview" alt="Avatar Preview">
+          </div>
           <label class="upload-btn">
             Change Avatar
             <input type="file" accept="image/*">
           </label>
-        </div>
 
-        <!-- 2FA -->
-        <div class="card">
-          <h2>Two-Factor Authentication (2FA)</h2>
+          <hr class="thin-separator">
+
+          <h2 style="margin-top: 0;">Two-Factor Authentication (2FA)</h2>
           <button class="main-btn">Enable 2FA</button>
 
           <div class="verify-box">
@@ -124,47 +106,32 @@
         </div>
 
       </div>
-
     </div>
-
   </div>
 
-  <!-- -------------------------
-       JAVASCRIPT FOR INLINE EDIT
-  -------------------------- -->
   <script>
     const editButtons = document.querySelectorAll('.edit-icon');
     const closeButtons = document.querySelectorAll('.close-edit');
 
-    // Show edit bar
     editButtons.forEach(button => {
       button.addEventListener('click', () => {
         const infoRow = button.closest('.info-row');
         const editBar = infoRow.querySelector('.edit-bar');
-
         editBar.style.display = 'block';
         setTimeout(() => editBar.classList.add('show'), 10);
-
         button.style.display = 'none';
       });
     });
 
-    // Close edit bar
     closeButtons.forEach(button => {
       button.addEventListener('click', () => {
         const editBar = button.closest('.edit-bar');
         const infoRow = button.closest('.info-row');
-
         editBar.classList.remove('show');
-
-        setTimeout(() => {
-          editBar.style.display = 'none';
-        }, 250);
-
+        setTimeout(() => { editBar.style.display = 'none'; }, 250);
         infoRow.querySelector('.edit-icon').style.display = 'block';
       });
     });
   </script>
-
 </body>
 </html>
